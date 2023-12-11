@@ -1,0 +1,130 @@
+#for beginners repos
+https://github.com/MunGell/awesome-for-beginners
+
+*******************  JS  **********************************
+
+#popup with input from user
+prompt("Enter your name:");
+
+#strings
+name.slice(0,2) // "Yuri" -> "Yu"
+
+******************  HTML ****************************
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+
+#design
+https://www.canva.com/
+
+#fonts
+https://fonts.google.com/
+
+#colors
+https://colorhunt.co/
+https://color.adobe.com/create/color-wheel
+
+#bootstrap
+https://getbootstrap.com/
+https://www.w3schools.com/bootstrap/bootstrap_templates.asp
+
+#color transparancy
+background-color: #e5833180 (the 80 at the end is transparancy value)
+
+#lorem ipsum
+https://www.lipsum.com/
+https://picsum.photos/
+
+#VSS debugging extension
+pesticide
+
+#center div horizontally
+width: 70%;
+margin-left: 15%;
+
+#position
+static, relative, absolute (parent should be positioned), fixed
+
+#display
+block
+inline (can't set width and height)
+inline-block
+
+#layouts
+Media Queries
+CSS Grid
+CSS Flexbox
+Ext. framework e.g. Bootstrap
+
+
+
+--------------------flex--------------------------------
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+direction
+order
+flex: 1/2/... (ratio of items width)
+flex-wrap: wrap/nowrap
+justify-content
+align-items (height property must be set on the container //height: 70vh;) (wrap disabled)
+align-self
+align-content (height property must be set on the container //height: 70vh;) (wrap enabled)
+sizing -> Content width < Width/Height < flex-basis < min-width/max-width
+flex-grow: 0/1
+flex-shrink: 0/1
+
+---------------------Grid------------------------------
+grid-template-column: 1fr 2fr; (fractional ratio)
+grid-template-row: 1fr 1fr;
+gap: 10px;
+
+grid-column-start: 1;
+grid-column-end: 3;
+grid-row-start: 2;
+grid-row-end: 3;
+grid-area: 2 / 1 / 3 / 3; (shortcut the same as 4 above)
+
+---------------------Bootstrap------------------------
+breakpoints
+
+-----------------------------------
+##Combining Selectors
+
+#group
+selector, selector { }
+
+#child (only one level deep)
+selector > selector { }
+
+#descendant (many levels deep)
+selector selector { }
+
+#chaining
+selectorselector { } // <h1 id="title" class="big">  h1#title.big {}
+
+#combining combiners
+selector selectorselector { }  //  .box p.comment {  }
+-------------------------------------------
+
+#Creating an Express Server
+1. Create directory
+2. Create index.js file
+3. Initialise NPM
+4. Install the Express package
+	4.1 Add "type": "module" to the package.json
+5. Write Server application in index.js
+6. Start sever
+
+----------------------------------------
+# find listening processes
+netstat -ano | findstr "LISTENING"
+
+----------------------------------------
+# Build realpath to a file
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+------------------------------------------------------------
