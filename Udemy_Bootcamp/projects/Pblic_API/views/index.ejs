@@ -5,11 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <title>What's the weather</title>
+    <link rel="icon" type="image/x-icon" href="/images/cat.png">
+    <title>Cat Facts</title>
 </head>
 
 <body>
-    <p>test</p>
+    <div class="container">
+        <h1>Cat Facts</h1>
+        <form id="myForm" method="post">
+            <input id="get" type="submit" value="Get a fact" formaction="/get-fact">
+        </form>
+        <div class="response-area">
+            <% if (locals.catPicture && locals.catFact) { %>
+                <img src="<%= catPicture %>" alt="cat picture">
+                <h2>
+                    <%= catFact %>
+                </h2>
+                <% } %>
+        </div>
+    </div>
 </body>
 
 </html>
