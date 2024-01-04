@@ -13,11 +13,11 @@
     <div class="container">
         <h1>Cat Facts</h1>
         <form id="myForm" method="post">
-            <input id="get" type="submit" value="Get a fact" formaction="/get-fact">
+            <input class="button" id="get" type="submit" value="Get a fact" formaction="/get-fact">
         </form>
         <div class="response-area">
             <% if (locals.catPicture && locals.catFact) { %>
-                <img src="<%= catPicture %>" alt="cat picture">
+                <img src="<%= catPicture %>" alt="cat picture" height="500px">
                 <h2>
                     <%= catFact %>
                 </h2>

@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #04AA6D;
+    padding: 10px;
+    text-align: center;
+    background-color: #E7E9EB;
+}
+
+.button {
+    border-radius: 8px;
+    background-color: #04AA6D;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
