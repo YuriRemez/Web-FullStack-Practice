@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "87799c51-6cf8-4b46-a1b0-3af1c016ba2b",
+		"_postman_id": "ab43dc52-690b-4c0b-b32e-d60b09ca6193",
 		"name": "JokeAPI",
 		"description": "A public API to deliver joy to the world!",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "6048123"
+		"_exporter_id": "31188041"
 	},
 	"item": [
 		{
@@ -484,8 +484,23 @@
 			"request": {
 				"method": "PATCH",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "type",
+							"value": "Agriculture",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "/jokes/:id",
+					"raw": "http://localhost:3000/jokes/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
 						"jokes",
 						":id"
@@ -493,7 +508,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": null
+							"value": "2"
 						}
 					]
 				},
@@ -578,16 +593,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "/jokes/:id",
+					"raw": "http://localhost:3000/jokes/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
 						"jokes",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": null
-						}
+						"101"
 					]
 				},
 				"description": "Delete a joke rfom the bank of jokes based on the path parameter provided for the joke `id`.\n\nWill return an error if no jokes match the provided `id`."
@@ -718,12 +732,36 @@
 		{
 			"name": "All Jokes",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "key",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "/jokes/all",
+					"raw": "http://localhost:3000/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
-						"jokes",
 						"all"
 					]
 				},
